@@ -16,7 +16,7 @@ Membres :
 - Asynchronous Response Handler : http://www.servicedesignpatterns.com/WebServiceInfrastructures/AsyncResponseHandler
 - Request/Acknowledge : http://www.servicedesignpatterns.com/ClientServiceInteractions/RequestAcknowledge
 - Datasource Adapter : http://www.servicedesignpatterns.com/WebServiceImplementationStyles/DatasourceAdapter
-- 
+- Idempotent Retry : http://www.servicedesignpatterns.com/WebServiceInfrastructures/IdempotentRetry
 
 # Language envisagées :
 - Front end : React, Redux, Bootstrap
