@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {MenuItem, Nav, NavItem, Navbar, NavDropdown} from 'react-bootstrap';
 import {Link, Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 
+import {Home} from './components/Home';
+import {Events} from './components/Events';
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header/>
-        <MyNav/>
-
-        <p className="App-intro">
-          début de notre site
-        </p>
-        <Footer/>
-      </div>
+      <Router>
+  			<div>
+  				<Header/>
+  				<MyNav/>
+  				<Switch>
+  					<Route exact path='/' component={Home}/>
+            <Route path='/Events' component={Events}/>
+  				</Switch>
+  				<Footer/>
+  			</div>
+  		</Router>
     );
   }
 }
@@ -29,7 +33,7 @@ const Header = () => (
 	</div>
 )
 
-class MyNav extends React.Component{
+class MyNav extends Component{
 	render(){
 		return (
 			<main>
@@ -43,9 +47,9 @@ class MyNav extends React.Component{
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem eventKey={1} href="#">Home</NavItem>
-              <NavItem eventKey={2} href="#">Evènement</NavItem>
-              <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+              <NavItem eventKey={1}><Link to='/'><span className="glyphicon glyphicon-home"></span>Home</Link></NavItem>
+              <NavItem eventKey={2}><Link to='/Events'>Events</Link></NavItem>
+              <NavDropdown eventKey={3} title="Photos" id="basic-nav-dropdown">
                 <MenuItem eventKey={3.1}>Action</MenuItem>
                 <MenuItem eventKey={3.2}>Another action</MenuItem>
                 <MenuItem eventKey={3.3}>Something else here</MenuItem>
@@ -54,17 +58,13 @@ class MyNav extends React.Component{
               </NavDropdown>
             </Nav>
             <Nav pullRight>
-              <NavItem eventKey={1} href="#">
-                Link Right
-              </NavItem>
-              <NavItem eventKey={2} href="#">
-                Link Right
-              </NavItem>
+              <NavItem eventKey={1} href="#">Connect</NavItem>
+              <NavItem eventKey={2} href="#">Help</NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
 			</main>
-		);
+		)
 	}
 }
 
