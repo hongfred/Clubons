@@ -1,14 +1,14 @@
 # Clubons
 Projet LO10 - P18
 Membres :
-- Frédéric Hong
+- Frï¿½dï¿½ric Hong
 - Nicolas Cadot
 - Mohamed Reda Benallal Akhdar
 
-# API utilisées : 
+# API utilisï¿½es : 
 - Google Maps API : https://developers.google.com/maps/documentation/javascript/adding-a-google-map 
 - Google Calendar API : https://developers.google.com/calendar/overview 
-- Buck'UTT API : A voir avec l'équipe Buck'UTT
+- Buck'UTT API : A voir avec l'ï¿½quipe Buck'UTT
 - Instagram API : https://www.instagram.com/developer/
 - Facebook API : https://developers.facebook.com/
 
@@ -18,7 +18,8 @@ Membres :
 - Datasource Adapter : http://www.servicedesignpatterns.com/WebServiceImplementationStyles/DatasourceAdapter
 - Idempotent Retry : http://www.servicedesignpatterns.com/WebServiceInfrastructures/IdempotentRetry
 
-# Language envisagées :
+# Language envisagï¿½es :
 - Front end : React, Redux, Bootstrap
 - Back end : NodeJS, ExpressJS, MySQL
 
+////////////////////////////////////////////////////////////////
