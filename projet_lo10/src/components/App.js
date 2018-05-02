@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import '../css/App.css';
-import {MenuItem, Nav, NavItem, Navbar, NavDropdown} from 'react-bootstrap';
+import {Nav, NavItem, Navbar} from 'react-bootstrap';
 import {Link, Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 
 import {Home} from './Home';
-import {Events} from './Events';
+import Events from './Events';
 import {Photos} from './Photos';
 import {Help} from './Help';
+import StoreV from './StoreV'
+
 
 class App extends Component {
   render() {

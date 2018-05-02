@@ -11,7 +11,7 @@ export class Home extends Component{
 				</section>
 				<div className="panel panel-default">
 					<div className="panel-heading">
-						<h3 className="panel-title">Informations:</h3>
+						<h3 className="panel-title">Events:</h3>
 					</div>
 					<div className="panel-body">
 						<div className="modal-body row">

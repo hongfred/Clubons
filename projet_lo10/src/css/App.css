@@ -28,7 +28,7 @@
 }
 
 #jumbotronHome {
-    background-image: url('D:/frederic/Documents/cours/lo10/Clubons/projet_lo10/src/css/homeBackground.jpg');
+    background-image: url('homeBackground.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 350px;
