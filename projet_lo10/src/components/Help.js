@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
 
-export class Events extends Component{
+export class Help extends Component{
 	render(){
 		return (
-			<div className = "contenu">
-				<h2 className = "text-center">Events</h2>
+			<div>
+				<h2 className = "text-center">Heeeeeeelp</h2>
 				<section className="jumbotron">
 					<div className="panel panel-default">
 						<div className="panel-heading">
-							<h3 className="panel-title">Liste des évènements:</h3>
+							<h3 className="panel-title">Informations:</h3>
 						</div>
 						<div className="panel-body">
 							<div className="modal-body row">

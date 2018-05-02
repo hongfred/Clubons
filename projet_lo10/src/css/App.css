@@ -26,3 +26,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#jumbotronHome {
+    background-image: url('D:/frederic/Documents/cours/lo10/Clubons/projet_lo10/src/css/homeBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
