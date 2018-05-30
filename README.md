@@ -24,10 +24,10 @@ Eléments de réponse : https://stackoverflow.com/questions/27316565/instagram-a
 
 # Design patterns :
 - Asynchronous Response Handler : http://www.servicedesignpatterns.com/WebServiceInfrastructures/AsyncResponseHandlerit
-(validé, on utilise de base javascript qui est un lnaguage asynchrone)
+(validé, on utilise de base javascript qui est un language asynchrone)
 
 - Request/Acknowledge : http://www.servicedesignpatterns.com/ClientServiceInteractions/RequestAcknowledge
-On a pas de gros traitement de données, donc peut être en trouver un autre?
+On a pas de gros traitements de données, donc peut être en trouver un autre?
 
 - Datasource Adapter : http://www.servicedesignpatterns.com/WebServiceImplementationStyles/DatasourceAdapter
 on a une couche d'abstraction avec les frameworks que l'ont peut utiliser. donc essayer de bien détailler ça.
