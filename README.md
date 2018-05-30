@@ -23,10 +23,18 @@ Eléments de réponse : https://stackoverflow.com/questions/27316565/instagram-a
 5. Buck'UTT API : A voir avec l'�quipe Buck'UTT (on sait pas trop, paiement difficile à mettre en place)
 
 # Design patterns :
-- Asynchronous Response Handler : http://www.servicedesignpatterns.com/WebServiceInfrastructures/AsyncResponseHandler
+- Asynchronous Response Handler : http://www.servicedesignpatterns.com/WebServiceInfrastructures/AsyncResponseHandlerit
+(validé, on utilise de base javascript qui est un lnaguage asynchrone)
+
 - Request/Acknowledge : http://www.servicedesignpatterns.com/ClientServiceInteractions/RequestAcknowledge
+On a pas de gros traitement de données, donc peut être en trouver un autre?
+
 - Datasource Adapter : http://www.servicedesignpatterns.com/WebServiceImplementationStyles/DatasourceAdapter
+on a une couche d'abstraction avec les frameworks que l'ont peut utiliser. donc essayer de bien détailler ça.
+Il nous a dit de regarder plus en détail webservice.
+
 - Idempotent Retry : http://www.servicedesignpatterns.com/WebServiceInfrastructures/IdempotentRetry
+on peut l'utiliser pour éviter les doublons lors de la création d'évènement (par exemple, la connection internet qui saute, et donc quand le service reprend, ça peut faire des doublons)
 
 # Language envisag�es :
 - Front end : React, Redux, Bootstrap
