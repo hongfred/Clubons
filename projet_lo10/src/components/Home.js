@@ -5,10 +5,10 @@ export class Home extends Component{
 	render(){
 		return (
 			<div>
-				<h2 className = "text-center">Home page</h2>
 				<section className="jumbotron" id="jumbotronHome">
-
+								<div class="text-center"><h1 id="titleHome">Home page</h1></div>
 				</section>
+
 				<div className="panel panel-default">
 					<div className="panel-heading">
 						<h3 className="panel-title">Events:</h3>

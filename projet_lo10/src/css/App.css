@@ -31,8 +31,10 @@
     background-image: url('homeBackground.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 350px;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 220px;
+    width: 100%;
+}
+
+#titleHome{
+    color: white;
 }
