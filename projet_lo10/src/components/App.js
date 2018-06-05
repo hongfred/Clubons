@@ -3,7 +3,7 @@ import '../css/App.css';
 import {Nav, NavItem, Navbar} from 'react-bootstrap';
 import {Link, Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 
-import {Home} from './Home';
+import Home from './Home';
 import Events from './Events';
 import {Photos} from './Photos';
 import {Help} from './Help';
@@ -15,6 +15,7 @@ class App extends Component {
     return (
       <Router>
   			<div>
+          <StoreV/>
   				<Header/>
   				<MyNav/>
   				<Switch>
