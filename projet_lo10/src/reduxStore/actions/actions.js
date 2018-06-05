@@ -43,7 +43,6 @@ export function itemsFetchDataSuccess(results) {
 }
 
 export function itemsFetchData(url) {
-
     return((dispatch) => {
         dispatch(itemsIsLoading(true));
         fetch(url)
