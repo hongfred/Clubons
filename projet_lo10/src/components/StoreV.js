@@ -9,6 +9,7 @@ class StoreV extends React.Component{
 				<h4>Mon store:</h4>
 				<ul>
 					<li>Todos: {JSON.stringify(this.props.MaListe)}</li>
+					<li>Resultat: {JSON.stringify(this.props.MesResultats)}</li>
 				</ul>
 			</div>
 		)
@@ -17,7 +18,8 @@ class StoreV extends React.Component{
 
 const mapStateToProps = (state) => {
     return {
-		    MaListe: state.todos
+		    MaListe: state.todos,
+				MesResultats: state.results
     };
 };
 
