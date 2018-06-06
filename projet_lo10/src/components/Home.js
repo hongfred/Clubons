@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import { connect } from 'react-redux';
 
+
 import {
 	itemsFetchData
 } from '../reduxStore/actions/actions';
+import { Map } from './Map';
+
 
 class Home extends Component{
 	componentDidMount(){
@@ -40,6 +43,7 @@ class Home extends Component{
 		//this.props.fetchData( "https://graph.facebook.com/v3.0/me?EAACEdEose0cBAP5HzGVoQoMNenmOdIo3zxfvtvrsMh1EkfEFpulQZB6BL5mvZBIirYb6gQQ8wtRUrj1V3ICQ1psPn2uxZAYfA2cm08VjkaKU3o5OoDNEZAkUUVSajZC0Wyr1J9Ql4vUZCbhTJxX9MAm0yEK4spUlDBKCZBry1huNVZAyi4EVgJTufZBwTpwm8rGWJAA3ozSr3DQZDZD&access_token=EAACEdEose0cBAP5HzGVoQoMNenmOdIo3zxfvtvrsMh1EkfEFpulQZB6BL5mvZBIirYb6gQQ8wtRUrj1V3ICQ1psPn2uxZAYfA2cm08VjkaKU3o5OoDNEZAkUUVSajZC0Wyr1J9Ql4vUZCbhTJxX9MAm0yEK4spUlDBKCZBry1huNVZAyi4EVgJTufZBwTpwm8rGWJAA3ozSr3DQZDZD");
 		//this.props.fetchData("https://graph.facebook.com/v3.0/434375290357905/events");
 	}
+
 	render(){
 		return (
 			<div>
@@ -57,6 +61,7 @@ class Home extends Component{
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		);
 	}

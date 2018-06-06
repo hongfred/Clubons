@@ -38,3 +38,16 @@
 #titleHome{
     color: white;
 }
+
+#mapEvent{
+  height: 50vh;
+  width: 50%;
+}
+
+#marker{
+  position: 'absolute';
+  width: 56;
+  height: 56;
+  left: -28;
+  top: -28;
+}

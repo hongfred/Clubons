@@ -3,6 +3,7 @@ import {Button, Grid} from 'react-bootstrap';
 
 import { connect } from 'react-redux';
 import {addTodo} from '../reduxStore/actions/actions'
+import { Map } from './Map';
 
 class Events extends React.Component{
 	constructor(props) {
@@ -39,6 +40,7 @@ class Events extends React.Component{
 						</div>
 					</div>
 				</section>
+				<Map/>
 			</div>
 		);
 	}
