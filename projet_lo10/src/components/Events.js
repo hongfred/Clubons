@@ -2,8 +2,11 @@ import React from 'react';
 import {Button, Grid} from 'react-bootstrap';
 
 import { connect } from 'react-redux';
-import {addTodo} from '../reduxStore/actions/actions'
+import { addTodo } from '../reduxStore/actions/actions'
+import { Marker } from './Marker';
 import { Map } from './Map';
+import { LocationSearchInput} from './LocationSearchInput';
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 
 class Events extends React.Component{
 	constructor(props) {
@@ -23,6 +26,7 @@ class Events extends React.Component{
 							<div className="container">
 								<section>
 									<Grid>
+										<LocationSearchInput/>
 										<Button
 											bsStyle="primary"
 											onClick={this.testStore}
@@ -40,7 +44,12 @@ class Events extends React.Component{
 						</div>
 					</div>
 				</section>
-				<Map/>
+				<Map>
+				<Marker
+						lat={48.269162}
+						lng={4.0667761}
+					/>
+				</Map>
 			</div>
 		);
 	}

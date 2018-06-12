@@ -19,10 +19,6 @@ export class Map extends Component{
 					defaultCenter={this.props.center}
 					defaultZoom={this.props.zoom}
 					>
-					<Marker
-						lat={48.269162}
-						lng={4.0667761}
-					/>
 					</GoogleMapReact>
 			</div>
 		);

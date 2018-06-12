@@ -36,7 +36,7 @@ const Header = () => (
 	<div>
 		<meta charSet="utf-8"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossOrigin="anonymous"/>
-	</div>
+  </div>
 )
 
 class MyNav extends Component{
@@ -75,6 +75,7 @@ const Footer = () => (
 				<i className="icon-user"></i> Admin
 				<i className="icon-calendar"></i> Jan 23th, 2017 at 2:20 pm
 			</p>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJmTnwARjZ6VBAyY8DsPFURJQt6JS26zI&libraries=places"></script>
 		</div>
 	</footer>
 )
