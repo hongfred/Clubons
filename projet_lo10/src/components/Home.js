@@ -38,8 +38,8 @@ class Home extends Component{
 	}
 
 	componentWillMount() {
-		this.props.fetchData( "https://graph.facebook.com/v3.0/me/groups?access_token=EAACEdEose0cBAL3dhPe4ikS25mQIQIcPUZBeZBdjlIYhzZByvdZAZCDxddT0aMUxCIl0lNDIjwdhyEEDuqWRyHc7qCTesavnHstfeWR00zpGMZBbdAXgYaOR8XsM2z9gSTPPdTN5Ny8TAgR6cIT8HIUuRi1zMnbBoCJlfVorbBjQrSdbiIjjNdbPLPWU1vF385V6fvHisgiwZDZD"
-);
+		this.props.fetchData( "https://api.instagram.com/v1/users/self/media/recent/?access_token=7948788050.196ebc1.52871b03b5fe491090357b82eadb9a23");
+		//this.props.fetchData( "https://graph.facebook.com/v3.0/me/groups?access_token=EAACEdEose0cBAL3dhPe4ikS25mQIQIcPUZBeZBdjlIYhzZByvdZAZCDxddT0aMUxCIl0lNDIjwdhyEEDuqWRyHc7qCTesavnHstfeWR00zpGMZBbdAXgYaOR8XsM2z9gSTPPdTN5Ny8TAgR6cIT8HIUuRi1zMnbBoCJlfVorbBjQrSdbiIjjNdbPLPWU1vF385V6fvHisgiwZDZD");
 		//this.props.fetchData( "https://graph.facebook.com/v3.0/me?EAACEdEose0cBAP5HzGVoQoMNenmOdIo3zxfvtvrsMh1EkfEFpulQZB6BL5mvZBIirYb6gQQ8wtRUrj1V3ICQ1psPn2uxZAYfA2cm08VjkaKU3o5OoDNEZAkUUVSajZC0Wyr1J9Ql4vUZCbhTJxX9MAm0yEK4spUlDBKCZBry1huNVZAyi4EVgJTufZBwTpwm8rGWJAA3ozSr3DQZDZD&access_token=EAACEdEose0cBAP5HzGVoQoMNenmOdIo3zxfvtvrsMh1EkfEFpulQZB6BL5mvZBIirYb6gQQ8wtRUrj1V3ICQ1psPn2uxZAYfA2cm08VjkaKU3o5OoDNEZAkUUVSajZC0Wyr1J9Ql4vUZCbhTJxX9MAm0yEK4spUlDBKCZBry1huNVZAyi4EVgJTufZBwTpwm8rGWJAA3ozSr3DQZDZD");
 		//this.props.fetchData("https://graph.facebook.com/v3.0/434375290357905/events");
 	}
@@ -53,11 +53,11 @@ class Home extends Component{
 
 				<div className="panel panel-default">
 					<div className="panel-heading">
-						<h3 className="panel-title">Events:</h3>
+						<h3 className="panel-title">Actualités:</h3>
 					</div>
 					<div className="panel-body">
 						<div className="modal-body row">
-							<li>Resultat: {JSON.stringify(this.props.MesResultats)}</li>
+							{this.props.MesResultats.data}
 						</div>
 					</div>
 				</div>
