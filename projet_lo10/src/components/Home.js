@@ -57,11 +57,19 @@ class Home extends Component{
 					</div>
 					<div className="panel-body">
 						<div className="modal-body row">
-							{this.props.MesResultats.data}
+						<ul>
+		          {this.props.MesResultats.map(function(image){
+		            return(
+									<a href={image.link}>
+									  <img src={image.url} alt="HTML tutorial" width="25%" height="25%"/>
+									</a>
+								);
+		          })}
+		        </ul>
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		);
 	}

@@ -47,7 +47,6 @@ export function itemsFetchData(url) {
         dispatch(itemsIsLoading(true));
         fetch(url)
             .then((response) => {
-
                 if (!response.ok) {
                     throw Error(response.statusText);
                 }
@@ -56,7 +55,19 @@ export function itemsFetchData(url) {
             })
             .then((response) => response.json())
             .then((items) => {
-						   dispatch(itemsFetchDataSuccess(items))
+              console.log(items)
+              var images= [];
+              for(var i=0;i<items.data.length;i++){
+                var image = {
+                    id: items.data[i].id,
+                    url:items.data[i].images.standard_resolution.url,
+                    link :items.data[i].link
+                }
+                images.push(image)
+              }
+              console.log(images)
+              //console.log(items.data[0].images.thumbnail)
+						   dispatch(itemsFetchDataSuccess(images))
 						})
             .catch(() => dispatch(itemsHasErrored(true)));
     });
