@@ -1,5 +1,6 @@
 import React from 'react'
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
+import Geocode from "react-geocode";
 import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
 
@@ -16,21 +17,22 @@ longitude: null }
     this.setState({ address })
   }
 
-  testStore(){
-    this.props.add(this.state.latitude + this.state.longitude)
+  testStore(address){
+    this.props.add(address)
+    Geocode.fromAddress(address).then(
+      response => {
+        const { lat, lng } = response.results[0].geometry.location;
+        this.props.add("Latitude :" + lat + " Longitude :" + lng);
+      },
+      error => {
+        console.error(error);
+      }
+    );
   }
 
   handleSelect = (address) => {
     this.setState({ address })
-    geocodeByAddress(address)
-      .then(res => getLatLng(res[0]))
-      .then(({ lat, lng }) => {
-        this.setState({
-          latitude: lat,
-          longitude: lng,
-        })
-        .then(this.testStore)
-      })
+    this.testStore()
 }
 
   render() {
