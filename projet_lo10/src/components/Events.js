@@ -4,8 +4,8 @@ import {Button, Grid} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
 import { Marker } from './Marker';
-import { Map } from './Map';
-import { LocationSearchInput} from './LocationSearchInput';
+import Map from './Map';
+import LocationSearchInput from './LocationSearchInput';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 
 class Events extends React.Component{
@@ -44,12 +44,7 @@ class Events extends React.Component{
 						</div>
 					</div>
 				</section>
-				<Map>
-				<Marker
-						lat={48.269162}
-						lng={4.0667761}
-					/>
-				</Map>
+				<Map/>
 			</div>
 		);
 	}

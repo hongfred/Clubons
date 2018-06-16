@@ -1,30 +1,44 @@
 import React from 'react'
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
+import { connect } from 'react-redux';
+import { addTodo } from '../reduxStore/actions/actions'
 
-export class LocationSearchInput extends React.Component {
+class LocationSearchInput extends React.Component {
   constructor(props) {
-    super(props);  
-    this.state = { address: '' }
+    super(props);
+    this.testStore = this.testStore.bind(this)
+    this.state = { address: '',
+latitude: null,
+longitude: null }
   }
 
   handleChange = (address) => {
     this.setState({ address })
   }
 
-  handleSelect = (address) => {
-      this.setState({address})
-    geocodeByAddress(address)
-      .then(results => getLatLng(results[0]))
-      .then(latLng => console.log('Success', latLng))
-      .catch(error => console.error('Error', error))
+  testStore(){
+    this.props.add(this.state.latitude + this.state.longitude)
   }
+
+  handleSelect = (address) => {
+    this.setState({ address })
+    geocodeByAddress(address)
+      .then(res => getLatLng(res[0]))
+      .then(({ lat, lng }) => {
+        this.setState({
+          latitude: lat,
+          longitude: lng,
+        })
+        .then(this.testStore)
+      })
+}
 
   render() {
     return (  
       <PlacesAutocomplete
         value={this.state.address}
         onChange={this.handleChange}
-        onSelect={this.handleSelect}
+        onSelect={this.testStore}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps }) => (
           <div>
@@ -54,3 +68,17 @@ export class LocationSearchInput extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        todos: state.todos
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        add: (text) => dispatch(addTodo(text))
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LocationSearchInput)
