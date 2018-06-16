@@ -3,7 +3,6 @@ import {Button, Grid} from 'react-bootstrap';
 
 import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
-import { Marker } from './Marker';
 import Map from './Map';
 import LocationSearchInput from './LocationSearchInput';
 

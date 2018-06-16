@@ -1,5 +1,5 @@
 import React from 'react'
-import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
+import PlacesAutocomplete from 'react-places-autocomplete'
 import Geocode from "react-geocode";
 import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
@@ -8,9 +8,7 @@ class LocationSearchInput extends React.Component {
   constructor(props) {
     super(props);
     this.testStore = this.testStore.bind(this)
-    this.state = { address: '',
-latitude: null,
-longitude: null }
+    this.state = { address: ''}
   }
 
   handleChange = (address) => {
