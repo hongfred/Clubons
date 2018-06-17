@@ -4,7 +4,8 @@ import { Grid} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
 import Map from './Map';
-import LocationSearchInput from './LocationSearchInput';
+import LocationSearchInput from './FormEvent';
+import FormEvent from './FormEvent';
 
 class Events extends React.Component{
 	constructor(props) {
@@ -24,7 +25,7 @@ class Events extends React.Component{
 							<div className="container">
 								<section>
 									<Grid>
-										<LocationSearchInput/>										
+										<FormEvent/>										
 										<div>
 											<ul>
 												{JSON.stringify(this.props.todos)}

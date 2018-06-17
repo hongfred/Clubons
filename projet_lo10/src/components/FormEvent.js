@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
 import {Button } from 'react-bootstrap';
 
-class LocationSearchInput extends React.Component {
+class FormEvent extends React.Component {
   constructor(props) {
     super(props);
     this.testStore = this.testStore.bind(this)
@@ -110,4 +110,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LocationSearchInput)
+export default connect(mapStateToProps, mapDispatchToProps)(FormEvent)
