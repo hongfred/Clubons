@@ -25,9 +25,12 @@ class FormEvent extends React.Component {
         const { lat, lng } = response.results[0].geometry.location;
         this.setState({latitude : lat,
         longitude : lng})
-        this.props.add("Area=" + this.state.address 
+        this.props.add(
+          "Area=" + this.state.address 
         + " Latitude=" + this.state.latitude 
         + " Longitude=" + this.state.longitude 
+        + " Nom=" + document.getElementById('nom').value
+        + " Date=" + document.getElementById('date').value
         + " Heure=" + document.getElementById('time').value
         + " Description=" + document.getElementById('description').value
         );
@@ -56,6 +59,9 @@ class FormEvent extends React.Component {
       >
         {({ getInputProps, suggestions, getSuggestionItemProps }) => (
           <div>
+            <label>Titre :</label>
+            <input type="text" name="nom" id="nom"/><br/>
+            <label>Adresse :</label>
             <input
               {...getInputProps({
                 placeholder: 'Search Places ...',
@@ -79,13 +85,11 @@ class FormEvent extends React.Component {
           </div>
         )}
       </PlacesAutocomplete>
-      <label>
-          Heure de l'évènement :
-      </label>
+      <label>Date de l'évènement :</label>
+      <input type="date" name="date" id="date"/><br/>
+      <label>Heure de l'évènement :</label>
       <input type="time" name="time" id="time"/><br/>
-      <label>
-          Description :
-      </label>
+      <label>Description :</label>
       <input type="text" name="description" id="description"/><br/>
       <Button
 				bsStyle="primary"
