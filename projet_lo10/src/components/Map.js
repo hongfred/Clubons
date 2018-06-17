@@ -10,7 +10,7 @@ class Map extends Component{
           lat: 48.2924582,
           lng: 4.041101
         },
-        zoom: 11
+        zoom: 10
       };
 
     render(){
@@ -27,8 +27,12 @@ class Map extends Component{
 						lng={4.0667761}
 						text={'Kreyser Avrora'}
 					/>	
+					{this.props.MesEvents.map(event => 
+					<Marker
+					lat={event.lat}
+					lng={event.long}
+					/>)}
 					</GoogleMapReact>
-
 			</div>
 		);
 	}	
