@@ -2,8 +2,9 @@ import React from 'react';
 import {Button, Grid} from 'react-bootstrap';
 
 import { connect } from 'react-redux';
-import {addTodo} from '../reduxStore/actions/actions'
-import { Map } from './Map';
+import { addTodo } from '../reduxStore/actions/actions'
+import Map from './Map';
+import LocationSearchInput from './LocationSearchInput';
 
 class Events extends React.Component{
 	constructor(props) {
@@ -23,11 +24,12 @@ class Events extends React.Component{
 							<div className="container">
 								<section>
 									<Grid>
+										<LocationSearchInput/>
 										<Button
 											bsStyle="primary"
 											onClick={this.testStore}
 										>
-											add in store
+											Ajouter le marker
 										</Button>
 										<div>
 											<ul>
