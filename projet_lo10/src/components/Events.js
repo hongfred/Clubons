@@ -9,7 +9,7 @@ import LocationSearchInput from './LocationSearchInput';
 class Events extends React.Component{
 	constructor(props) {
         super(props);
-		this.testStore = this.testStore.bind(this)
+				this.testStore = this.testStore.bind(this)
     }
 	testStore(){
 		this.props.add('ça marche')
