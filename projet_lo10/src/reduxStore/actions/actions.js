@@ -42,7 +42,14 @@ export function itemsFetchDataSuccess(results) {
     };
 }
 
-export function itemsFetchData(url) {
+export function itemsFetchEventsSuccess(events) {
+    return {
+        type: 'ITEMS_FETCH_EVENTS_SUCCESS',
+        events
+    };
+}
+
+export function itemsFetchDataInstagram(url) {
     return((dispatch) => {
         dispatch(itemsIsLoading(true));
         fetch(url)
@@ -55,7 +62,6 @@ export function itemsFetchData(url) {
             })
             .then((response) => response.json())
             .then((items) => {
-              console.log(items)
               var images= [];
               for(var i=0;i<items.data.length;i++){
                 var image = {
@@ -65,10 +71,27 @@ export function itemsFetchData(url) {
                 }
                 images.push(image)
               }
-              console.log(images)
-              //console.log(items.data[0].images.thumbnail)
 						   dispatch(itemsFetchDataSuccess(images))
 						})
+            .catch(() => dispatch(itemsHasErrored(true)));
+    });
+}
+
+export function itemsFetchEvents(url) {
+    return((dispatch) => {
+        dispatch(itemsIsLoading(true));
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                dispatch(itemsIsLoading(false));
+                return response;
+            })
+            .then((response) => response.json())
+            .then((items) => {
+               dispatch(itemsFetchEventsSuccess(items))
+            })
             .catch(() => dispatch(itemsHasErrored(true)));
     });
 }

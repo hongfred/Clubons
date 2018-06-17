@@ -10,7 +10,8 @@ class Map extends Component{
           lat: 48.2924582,
           lng: 4.041101
         },
-    zoom: 11};
+        zoom: 11
+      };
 
     render(){
 		return (
@@ -35,9 +36,9 @@ class Map extends Component{
 
 const mapStateToProps = (state) => {
     return {
-		    MaListe: state.todos
+		    MaListe: state.todos,
+        MesEvents: state.events
     };
 };
 
 export default connect(mapStateToProps)(Map)
-

@@ -2,17 +2,7 @@ import React, { Component } from 'react';
 import {Grid, Row, Col} from 'react-bootstrap';
 import { connect } from 'react-redux';
 
-
-import {
-	itemsFetchData
-} from '../reduxStore/actions/actions';
-
-
 class Home extends Component{
-	componentWillMount() {
-		this.props.fetchData( "https://api.instagram.com/v1/users/self/media/recent/?access_token=7948788050.196ebc1.52871b03b5fe491090357b82eadb9a23");
-	}
-
 	render(){
 		return (
 			<div>
@@ -26,6 +16,13 @@ class Home extends Component{
 					</div>
 					<div className="panel-body">
 						<div className="modal-body row">
+						<ul>
+							{this.props.MesEvents.map(function(event){
+		            return(
+									<li>{event.name}</li>
+								);
+		          })}
+						</ul>
 						<ul>
 		          {this.props.MesResultats.map(function(image){
 		            return(
@@ -46,14 +43,9 @@ class Home extends Component{
 
 const mapStateToProps = (state) => {
     return {
-			MesResultats: state.results
+			MesResultats: state.results,
+			MesEvents: state.events
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-				fetchData: (url) => dispatch(itemsFetchData(url)),
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps)(Home);

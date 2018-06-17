@@ -1,15 +1,17 @@
 import React from 'react';
 import { Grid} from 'react-bootstrap';
-
 import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
 import Map from './Map';
+
 import FormEvent from './FormEvent';
+
+import LocationSearchInput from './LocationSearchInput';
 
 class Events extends React.Component{
 	constructor(props) {
         super(props);
-		this.testStore = this.testStore.bind(this)
+				this.testStore = this.testStore.bind(this)
     }
 	testStore(){
 		this.props.add('ça marche')
@@ -25,6 +27,14 @@ class Events extends React.Component{
 								<section>
 									<Grid>
 										<FormEvent/>										
+										<LocationSearchInput/>
+										<Button
+											bsStyle="primary"
+											onClick={this.testStore}
+										>
+											Ajouter le marker
+										</Button>
+
 										<div>
 											<ul>
 												{JSON.stringify(this.props.todos)}
