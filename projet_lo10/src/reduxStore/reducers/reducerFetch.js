@@ -51,10 +51,20 @@ function results(state = [], action) {
     }
 }
 
+function events(state = [], action) {
+    switch (action.type) {
+        case 'ITEMS_FETCH_EVENTS_SUCCESS':
+            return action.events;
+        default:
+            return state;
+    }
+}
+
 const rootReducer = combineReducers({
 	todos,
   itemsHasErrored,
   itemsIsLoading,
-  results
+  results,
+  events
 })
 export default rootReducer;

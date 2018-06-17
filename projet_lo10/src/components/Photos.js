@@ -2,13 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import {
-	itemsFetchData
+	itemsFetchDataInstagram
 } from '../reduxStore/actions/actions';
 
 export class Photos extends Component{
-	componentWillMount() {
-		this.props.fetchData( "https://api.instagram.com/v1/users/self/media/recent/?access_token=7948788050.196ebc1.52871b03b5fe491090357b82eadb9a23");
-	}
 	render(){
 		return (
 			<div>
@@ -33,10 +30,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-				fetchData: (url) => dispatch(itemsFetchData(url)),
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Photos);
+export default connect(mapStateToProps)(Photos);

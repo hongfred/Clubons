@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/App.css';
 import {Nav, NavItem, Navbar} from 'react-bootstrap';
 import {Link, Switch, Route, BrowserRouter as Router} from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Home from './Home';
 import Events from './Events';
@@ -9,12 +10,21 @@ import Photos from './Photos';
 import {Help} from './Help';
 import StoreV from './StoreV'
 
+import {
+	itemsFetchDataInstagram,
+	itemsFetchEvents
+} from '../reduxStore/actions/actions';
 
 class App extends Component {
+  componentWillMount() {
+    this.props.fetchData("https://api.instagram.com/v1/users/self/media/recent/?access_token=7948788050.196ebc1.52871b03b5fe491090357b82eadb9a23");
+    this.props.fetchEvents("http://localhost:1337/fetchEvents");
+  }
   render() {
     return (
       <Router>
   			<div>
+          <StoreV/>
   				<Header/>
   				<MyNav/>
   				<Switch>
@@ -80,4 +90,18 @@ const Footer = () => (
 	</footer>
 )
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+			MesResultats: state.results,
+			MesEvents: state.events
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+				fetchData: (url) => dispatch(itemsFetchDataInstagram(url)),
+				fetchEvents: (url) => dispatch(itemsFetchEvents(url))
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
