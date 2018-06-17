@@ -19,10 +19,12 @@ class Map extends Component{
 					bootstrapURLKeys={{ key: 'AIzaSyAJmTnwARjZ6VBAyY8DsPFURJQt6JS26zI'}}
 					defaultCenter={this.props.center}
 					defaultZoom={this.props.zoom}
+					hoverDistance={28}
 					>
 					<Marker
 						lat={48.269162}
 						lng={4.0667761}
+						text={'Kreyser Avrora'}
 					/>	
 					</GoogleMapReact>
 

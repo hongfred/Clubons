@@ -4,7 +4,6 @@ import { Grid} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
 import Map from './Map';
-import LocationSearchInput from './FormEvent';
 import FormEvent from './FormEvent';
 
 class Events extends React.Component{
