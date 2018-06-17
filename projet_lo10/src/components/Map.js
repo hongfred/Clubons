@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Marker } from './Marker';
 import GoogleMapReact from 'google-map-react';
+import { connect } from 'react-redux';
 
-export class Map extends Component{
+class Map extends Component{
     //Centrer la Map sur Troyes
     static defaultProps = {
         center: {
@@ -22,9 +23,19 @@ export class Map extends Component{
 					<Marker
 						lat={48.269162}
 						lng={4.0667761}
-					/>
+					/>	
 					</GoogleMapReact>
+
 			</div>
 		);
-	}
+	}	
 }
+
+const mapStateToProps = (state) => {
+    return {
+		    MaListe: state.todos
+    };
+};
+
+export default connect(mapStateToProps)(Map)
+
