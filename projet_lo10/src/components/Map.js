@@ -25,7 +25,6 @@ class Map extends Component{
 					<Marker
 						lat={48.269162}
 						lng={4.0667761}
-						text={'Kreyser Avrora'}
 					/>	
 					{this.props.MesEvents.map(event => 
 					<Marker
