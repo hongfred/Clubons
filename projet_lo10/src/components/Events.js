@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Grid} from 'react-bootstrap';
+import { Grid} from 'react-bootstrap';
 
 import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
@@ -24,13 +24,7 @@ class Events extends React.Component{
 							<div className="container">
 								<section>
 									<Grid>
-										<LocationSearchInput/>
-										<Button
-											bsStyle="primary"
-											onClick={this.testStore}
-										>
-											Ajouter le marker
-										</Button>
+										<LocationSearchInput/>										
 										<div>
 											<ul>
 												{JSON.stringify(this.props.todos)}

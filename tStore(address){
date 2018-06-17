@@ -1,0 +1,213 @@
+[33mcommit 9e2d43ff63b5fdc9e50fc4e7857d7af9ca5156c3[m[33m ([m[1;36mHEAD -> [m[1;32mtest_nico[m[33m, [m[1;31morigin/test_nico[m[33m)[m
+Author: unknown <nicola.cadot@gmail.com>
+Date:   Sat Jun 16 16:06:48 2018 +0200
+
+    Clean les variables non utilisées
+
+[33mcommit f3c93ce512cc68455fa5cf471ea3beac7c5e4085[m
+Author: unknown <nicola.cadot@gmail.com>
+Date:   Sat Jun 16 15:40:47 2018 +0200
+
+    Ajout du geocoder / Ajout dans le store de la latitude et longitude de la sélection
+
+[33mcommit bd1197082112e16fabb1935c80ad2122ba853988[m
+Author: xsanxsan <nicola.cadot@laposte.net>
+Date:   Sat Jun 16 13:29:39 2018 +0200
+
+    non working at the moment
+
+[33mcommit 1b0ed713c0b574e855e83756b10ef444c5fcc5b3[m
+Author: xsanxsan <nicola.cadot@laposte.net>
+Date:   Tue Jun 12 14:13:46 2018 +0200
+
+    Commit avant la merde
+
+[33mcommit 6be26dd142e14040c5160c94e1472c564a0ba4a4[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 24f1c2e 6773578
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Tue Jun 12 12:39:58 2018 +0200
+
+    Merge pull request #7 from hongfred/test_fred2
+    
+    récupération image insta
+
+[33mcommit 6773578ca6c88957b5e6ebe697ec329b1e3b9fa8[m[33m ([m[1;31morigin/test_fred2[m[33m)[m
+Author: Hong <frederic.hong@utt.fr>
+Date:   Tue Jun 12 12:38:14 2018 +0200
+
+    récupération image insta
+
+[33mcommit 24f1c2e28717b8c18d4d614d4895b9fddd13d7a1[m
+Author: xsanxsan <nicola.cadot@laposte.net>
+Date:   Wed Jun 6 14:37:50 2018 +0200
+
+    Ajout de la google Map dans la page event
+
+[33mcommit 2f783f280fedd3195e38fefe9ad414a74470f37d[m
+Merge: 2caade6 7da76f8
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Tue Jun 5 22:32:46 2018 +0200
+
+    Merge pull request #6 from hongfred/test_fred
+    
+    test url
+
+[33mcommit 7da76f832f2a244303df1c87ded8d8ae6d9d6021[m
+Author: hongfred <frederic.hong@utt.fr>
+Date:   Tue Jun 5 22:32:18 2018 +0200
+
+    test url
+
+[33mcommit 2caade66976dc0d2caac8f56f0932aca16ba1bf7[m
+Merge: 5fe84bb 73c4504
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Tue Jun 5 18:00:19 2018 +0200
+
+    Merge pull request #5 from hongfred/test_fred
+    
+    Test fred
+
+[33mcommit 73c450403b293e044985e4f040e3fa1b8cb57846[m
+Author: hongfred <frederic.hong@utt.fr>
+Date:   Tue Jun 5 17:59:07 2018 +0200
+
+    implémentation du fetch
+
+[33mcommit 862c426121b71583bb08aff07b8e539e6bb19f1c[m
+Merge: 40a4d00 5fe84bb
+Author: hongfred <frederic.hong@utt.fr>
+Date:   Tue Jun 5 16:17:08 2018 +0200
+
+    Merge branch 'master' of https://github.com/hongfred/Clubons into test_fred
+
+[33mcommit 5fe84bbf2e655f46ecf5535b7ae3ab2737e9c774[m
+Merge: 0502917 cd48f50
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Tue Jun 5 16:02:31 2018 +0200
+
+    Merge pull request #4 from hongfred/test_fred2
+    
+    modification css
+
+[33mcommit cd48f500d88f946d92cb023a237206aeaeea7d67[m
+Author: Hong <frederic.hong@utt.fr>
+Date:   Tue Jun 5 15:59:14 2018 +0200
+
+    modification css
+
+[33mcommit 0502917f9934ebc64799d25a011583da7c7f2270[m
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Wed May 30 13:33:47 2018 +0200
+
+    Update README.md
+
+[33mcommit 16dd61fddf6639f478303908f6faae88052dff79[m
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Wed May 30 13:32:21 2018 +0200
+
+    Update README.md
+
+[33mcommit 6e1d9ed421639ba64cc918854d159b738c33b06f[m
+Author: xsanxsan <nicola.cadot@laposte.net>
+Date:   Tue May 15 10:56:18 2018 +0200
+
+    Mise à jour du readme des API utilisées en y apportant plus de précisions et certains éléments de réponses
+
+[33mcommit 5467de18b08592e086b6b9b80cc1fc07a56dbf5d[m
+Merge: 536d1a6 bbb409e
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Wed May 2 14:30:17 2018 +0200
+
+    Merge pull request #3 from hongfred/test_fred2
+    
+    ajout redux
+
+[33mcommit bbb409eaaaaef8faf713afccda1f0a8ef93bc39d[m
+Author: Hong <frederic.hong@utt.fr>
+Date:   Wed May 2 14:28:45 2018 +0200
+
+    ajout redux
+
+[33mcommit 536d1a68a7c6994a1787c3bc93f78b2556c0e81c[m
+Merge: 6f4c30d 8eea666
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Wed May 2 10:18:20 2018 +0200
+
+    Merge pull request #2 from hongfred/test_fred2
+    
+    deuxième merge
+
+[33mcommit 8eea666bb3975ba318e11d569602efd06922a4ba[m
+Author: Hong <frederic.hong@utt.fr>
+Date:   Wed May 2 10:14:16 2018 +0200
+
+    jumbotron de la home page + link des autres pages
+
+[33mcommit 40a4d00ee8adac4f4c7dc875d89cc56238f38469[m
+Author: hongfred <frederic.hong@utt.fr>
+Date:   Tue May 1 17:54:06 2018 +0200
+
+    suppression du test
+
+[33mcommit 126876d50b4c7909fe2a1a0e0c82ef1eb8da7bfc[m
+Author: hongfred <frederic.hong@utt.fr>
+Date:   Tue May 1 17:52:35 2018 +0200
+
+    test
+
+[33mcommit 6f4c30d29c86cbd4606f17b92a1741fbaace7ca0[m
+Merge: a96dbcd 4c7697b
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Tue May 1 17:38:24 2018 +0200
+
+    Merge pull request #1 from hongfred/test_fred
+    
+    premier merge
+
+[33mcommit 4c7697ba36f3b5ccdeaeafda203b1ad7b328e113[m
+Author: hongfred <frederic.hong@utt.fr>
+Date:   Tue May 1 17:27:22 2018 +0200
+
+    introduction du routeur
+
+[33mcommit a96dbcd1a917ed56a5a4446924d47dbe62783436[m
+Author: xsanxsan <nicola.cadot@laposte.net>
+Date:   Tue May 1 16:37:27 2018 +0200
+
+    Modification visuelle du readme
+
+[33mcommit 54c5dfd14e75215ebb7f72c5b07da7fbbebc7123[m
+Author: hongfred <frederic.hong@utt.fr>
+Date:   Tue May 1 15:11:31 2018 +0200
+
+    Ajout de la barre de navigation et de packages
+
+[33mcommit f09ee5c017ffdb91ec3571537acf5cf3bfd99775[m
+Author: hongfred <frederic.hong@utt.fr>
+Date:   Tue May 1 14:25:24 2018 +0200
+
+    start
+
+[33mcommit 03dd83dabc50399896131c814cad6169307d6d66[m
+Author: xsanxsan <nicola.cadot@laposte.net>
+Date:   Thu Apr 12 11:56:53 2018 +0200
+
+    Ajout du dernier design pattern dans le readme
+
+[33mcommit 99400278bbbc6b4474b95e7d9845331e4987c081[m
+Author: xsanxsan <nicola.cadot@laposte.net>
+Date:   Thu Apr 12 11:47:43 2018 +0200
+
+    Ajout de la description plus complète du projet dans le readme
+
+[33mcommit fe1cd0d2b07e50c29896e5fa9f7c7dac4162d63f[m
+Author: xsanxsan <nicola.cadot@laposte.net>
+Date:   Thu Apr 12 11:16:35 2018 +0200
+
+    Ajout des API utilisées dans le readme
+
+[33mcommit ed3f414ebb5bd69c61b79ede6b1bfcdad5cde317[m
+Author: hongfred <31621148+hongfred@users.noreply.github.com>
+Date:   Thu Apr 12 10:26:51 2018 +0200
+
+    Initial commit

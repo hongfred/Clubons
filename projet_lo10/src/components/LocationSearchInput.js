@@ -3,24 +3,34 @@ import PlacesAutocomplete from 'react-places-autocomplete'
 import Geocode from "react-geocode";
 import { connect } from 'react-redux';
 import { addTodo } from '../reduxStore/actions/actions'
+import {Button } from 'react-bootstrap';
 
 class LocationSearchInput extends React.Component {
   constructor(props) {
     super(props);
     this.testStore = this.testStore.bind(this)
-    this.state = { address: ''}
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = { address: '',
+  latitude : 0,
+  longitude: 0}
   }
 
-  handleChange = (address) => {
-    this.setState({ address })
+  handleSubmit = () => {
+    this.testStore()
   }
 
-  testStore(address){
-    this.props.add(address)
-    Geocode.fromAddress(address).then(
+  testStore(){
+    Geocode.fromAddress(this.state.address).then(
       response => {
         const { lat, lng } = response.results[0].geometry.location;
-        this.props.add("Latitude :" + lat + " Longitude :" + lng);
+        this.setState({latitude : lat,
+        longitude : lng})
+        this.props.add("Area=" + this.state.address 
+        + " Latitude=" + this.state.latitude 
+        + " Longitude=" + this.state.longitude 
+        + " Heure=" + document.getElementById('time').value
+        + " Description=" + document.getElementById('description').value
+        );
       },
       error => {
         console.error(error);
@@ -30,15 +40,19 @@ class LocationSearchInput extends React.Component {
 
   handleSelect = (address) => {
     this.setState({ address })
-    this.testStore()
+}
+
+  handleChange = (address) => {
+  this.setState({ address })
 }
 
   render() {
-    return (  
+    return (
+      <div class="formEvent">
       <PlacesAutocomplete
         value={this.state.address}
         onChange={this.handleChange}
-        onSelect={this.testStore}
+        onSelect={this.handleSelect}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps }) => (
           <div>
@@ -65,6 +79,21 @@ class LocationSearchInput extends React.Component {
           </div>
         )}
       </PlacesAutocomplete>
+      <label>
+          Heure de l'évènement :
+      </label>
+      <input type="time" name="time" id="time"/><br/>
+      <label>
+          Description :
+      </label>
+      <input type="text" name="description" id="description"/><br/>
+      <Button
+				bsStyle="primary"
+				onClick={this.testStore}
+			>
+				Créer l'évènement
+			</Button>
+    </div>
     );
   }
 }
