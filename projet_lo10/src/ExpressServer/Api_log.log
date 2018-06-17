@@ -114,8 +114,13 @@
 2018-6-17 23:52:07  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
 2018-6-17 23:52:10  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
 2018-6-17 23:52:21  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
+<<<<<<< HEAD
+2018-06-18 00:07:08  IP:  ::1 Method: GET  Url: /  Body: {}
+2018-06-18 00:07:11  IP:  ::1 Method: GET  Url: /fetchEvents  Body: {}
+=======
 2018-6-18 00:00:20  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
 2018-6-18 00:03:04  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
 2018-6-18 00:06:54  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
 2018-6-18 00:06:58  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
 2018-6-18 00:15:31  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
+>>>>>>> 297119a6a28f8ad103776e7f18ca44ca1754c904

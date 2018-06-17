@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
     var time = new Date().toLocaleString();
     var log_string = time + "  IP:  " + req.ip + " Method: " + req.method + "  Url: " + req.originalUrl + "  Body: " + JSON.stringify(req.body);
     console.log(log_string);
-    fs.appendFile("Api_log.log", log_string + '\r\n', 'utf-8', function (err) { if (err) { throw Error(err); } });
+    //fs.appendFile("Api_log.log", log_string + '\r\n', 'utf-8', function (err) { if (err) { throw Error(err); } });
     res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' });
     res.set({ 'Access-Control-Allow-Credentials': true });
     next();
