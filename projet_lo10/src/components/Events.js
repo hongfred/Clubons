@@ -6,8 +6,6 @@ import Map from './Map';
 
 import FormEvent from './FormEvent';
 
-import LocationSearchInput from './LocationSearchInput';
-
 class Events extends React.Component{
 	constructor(props) {
         super(props);
@@ -27,14 +25,6 @@ class Events extends React.Component{
 								<section>
 									<Grid>
 										<FormEvent/>										
-										<LocationSearchInput/>
-										<Button
-											bsStyle="primary"
-											onClick={this.testStore}
-										>
-											Ajouter le marker
-										</Button>
-
 										<div>
 											<ul>
 												{JSON.stringify(this.props.todos)}
