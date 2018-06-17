@@ -114,3 +114,5 @@
 2018-6-17 23:52:07  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
 2018-6-17 23:52:10  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
 2018-6-17 23:52:21  IP:  ::ffff:127.0.0.1 Method: GET  Url: /fetchEvents  Body: {}
+2018-06-18 00:07:08  IP:  ::1 Method: GET  Url: /  Body: {}
+2018-06-18 00:07:11  IP:  ::1 Method: GET  Url: /fetchEvents  Body: {}
