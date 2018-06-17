@@ -11,7 +11,7 @@ class Map extends Component{
           lng: 4.041101
         },
     zoom: 11};
-    
+
     render(){
 		return (
 			<div id="mapEvent">

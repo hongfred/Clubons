@@ -5,7 +5,7 @@ import {Link, Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 
 import Home from './Home';
 import Events from './Events';
-import {Photos} from './Photos';
+import Photos from './Photos';
 import {Help} from './Help';
 import StoreV from './StoreV'
 
@@ -53,7 +53,7 @@ class MyNav extends Component{
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem eventKey={1}><Link to='/'><span className="glyphicon glyphicon-home"></span>Home</Link></NavItem>
+              <NavItem eventKey={1}><Link to='/'>Home</Link></NavItem>
               <NavItem eventKey={2}><Link to='/Events'>Events</Link></NavItem>
               <NavItem eventKey={3}><Link to='/Photos'>Picture</Link></NavItem>
             </Nav>
