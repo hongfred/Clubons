@@ -7,12 +7,12 @@ class Home extends Component{
 		return (
 			<div>
 				<section className="jumbotron" id="jumbotronHome">
-								<div className="text-center"><h1 id="titleHome">Home page</h1></div>
+								<div className="text-center"><h1 id="titleHome">Welcome to Clubons!</h1></div>
 				</section>
 
 				<div className="panel panel-default">
 					<div className="panel-heading">
-						<h3 className="panel-title">Actualités:</h3>
+						<h2 className="panel-title">Actualités:</h2>
 					</div>
 					<div className="panel-body">
 						<div className="modal-body row">
@@ -23,7 +23,7 @@ class Home extends Component{
 								);
 		          })}
 						</ul>
-						<ul>
+						<ul style={{borderTop:"solid",marginBottom:100}}>
 		          {this.props.MesResultats.map(function(image){
 		            return(
 									<a href={image.link}>

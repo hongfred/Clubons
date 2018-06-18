@@ -16,20 +16,15 @@ class Events extends React.Component{
 	}
 	render(){
 		return (
-			<div>
-				<h2 className = "text-center">Page test add</h2>
+			<div id="divG">
+				<h1 className = "text-center">Page test add</h1>
 				<section className="jumbotron">
 					<div className="panel panel-default">
 						<div className="panel-body">
 							<div className="container">
 								<section>
 									<Grid>
-										<FormEvent/>										
-										<div>
-											<ul>
-												{JSON.stringify(this.props.todos)}
-											</ul>
-										</div>
+										<FormEvent/>
 									</Grid>
 								</section>
 							</div>
