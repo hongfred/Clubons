@@ -24,7 +24,7 @@ class Events extends React.Component{
 							<div className="container">
 								<section>
 									<Grid>
-										<FormEvent/>
+										<FormEvent className="formEvent"/>
 									</Grid>
 								</section>
 							</div>

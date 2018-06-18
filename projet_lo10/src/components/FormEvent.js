@@ -63,15 +63,15 @@ class FormEvent extends React.Component {
         {({ getInputProps, suggestions, getSuggestionItemProps }) => (
           <div>
             <label>Titre :</label>
-            <input type="text" name="nom" id="nom"/><br/>
+            <input class="eventInput" type="text" name="nom" id="nom"/><br/>
             <label>Adresse :</label>
-            <input
+            <input class="eventInput"
               {...getInputProps({
                 placeholder: 'Search Places ...',
                 className: 'location-search-input'
               })}
             />
-            <div className="autocomplete-dropdown-container">
+            <div className="autocomplete-dropdown-container" >
               {suggestions.map(suggestion => {
                 const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item';
                 // inline style for demonstration purpose
@@ -88,13 +88,13 @@ class FormEvent extends React.Component {
           </div>
         )}
       </PlacesAutocomplete>
-      <label>Date de l’évènement :</label>
-      <input type="date" name="date" id="date"/><br/>
-      <label>Heure de l’évènement :</label>
-      <input type="time" name="time" id="time"/><br/>
+      <label class="labelTime">Date de l’event :</label>
+      <input class="timeInput dateInput" type="date" name="date" id="date"/>
+      <label class="labelTime">Heure de l’event :</label>
+      <input class="timeInput hourInput" type="time" name="time" id="time"/><br/>
       <label>Description :</label>
-      <input type="text" name="description" id="description"/><br/>
-      <Button
+      <input class="eventInput" type="text" name="description" id="description"/><br/>
+      <Button class="createEvent"
 				bsStyle="primary"
 				onClick={this.testStore}
 			>
