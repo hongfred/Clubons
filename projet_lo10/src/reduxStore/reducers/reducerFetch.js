@@ -60,11 +60,21 @@ function events(state = [], action) {
     }
 }
 
+function postEvents(state = [], action) {
+    switch (action.type) {
+        case 'DATA_POST_EVENTS_SUCCESS':
+            return action.postEvents;
+        default:
+            return state;
+    }
+}
+
 const rootReducer = combineReducers({
 	todos,
   itemsHasErrored,
   itemsIsLoading,
   results,
-  events
+  events,
+  postEvents
 })
 export default rootReducer;

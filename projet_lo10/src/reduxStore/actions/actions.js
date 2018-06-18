@@ -95,3 +95,37 @@ export function itemsFetchEvents(url) {
             .catch(() => dispatch(itemsHasErrored(true)));
     });
 }
+
+export function eventPostScenarioSuccess(postEvents) {
+	return {
+        type:'DATA_POST_EVENTS_SUCCESS',
+        postEvents
+    };
+}
+
+export function eventPostData(url, data) {
+    return((dispatch) => {
+        console.log(data)
+        dispatch(itemsIsLoading(true));
+        fetch(url, {
+    			headers:{
+    				'content-type': 'application/json'
+    			},
+    			method: 'POST',
+    			body:data
+    		})
+            .then((response) => {
+              console.log(url)
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+
+                dispatch(itemsIsLoading(false));
+
+                return response;
+            })
+            .then((response) => response.json())
+            .then((events) => dispatch(eventPostScenarioSuccess(events)))
+            .catch(() => dispatch(itemsHasErrored(true)));
+    });
+}
