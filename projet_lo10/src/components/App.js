@@ -24,7 +24,6 @@ class App extends Component {
     return (
       <Router>
   			<div>
-          <StoreV/>
   				<Header/>
   				<MyNav/>
   				<Switch>
@@ -53,11 +52,10 @@ class MyNav extends Component{
 	render(){
 		return (
 			<main>
-				<h1 className = "text-center">Clubons</h1>
-        <Navbar inverse collapseOnSelect>
+        <Navbar className="navbar navbar-fixed-top" inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#brand">Navigation bar</a>
+              <a href="#brand">Clubons</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
@@ -68,8 +66,7 @@ class MyNav extends Component{
               <NavItem eventKey={3}><Link to='/Photos'>Picture</Link></NavItem>
             </Nav>
             <Nav pullRight>
-              <NavItem eventKey={1} href="#">Connect</NavItem>
-              <NavItem eventKey={2}><Link to='/Help'>Help</Link></NavItem>
+              <NavItem eventKey={1}><Link to='/Help'>Help</Link></NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

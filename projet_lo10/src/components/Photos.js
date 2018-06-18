@@ -8,8 +8,8 @@ import {
 export class Photos extends Component{
 	render(){
 		return (
-			<div>
-				<h2 className = "text-center">Photos des évènements</h2>
+			<div id="divG">
+				<h1 className = "text-center">Photos des évènements</h1>
 				<div id="affichagePhotos">
 	        {this.props.MesResultats.map(function(image){
 	          return(

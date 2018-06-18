@@ -7,23 +7,29 @@ class Home extends Component{
 		return (
 			<div>
 				<section className="jumbotron" id="jumbotronHome">
-								<div className="text-center"><h1 id="titleHome">Home page</h1></div>
+								<div className="text-center"><h1 id="titleHome">Welcome to Clubons!</h1></div>
 				</section>
 
 				<div className="panel panel-default">
 					<div className="panel-heading">
-						<h3 className="panel-title">Actualités:</h3>
+						<h2 className="panel-title">Actualités:</h2>
 					</div>
 					<div className="panel-body">
 						<div className="modal-body row">
 						<ul>
 							{this.props.MesEvents.map(function(event){
 		            return(
-									<li>{event.name}</li>
+									<div key={event.idevent} id="divSep">
+										<li className="li">Nom: {event.name}</li>
+										<li className="li">Description: {event.description}</li>
+										<li className="li">Addresse: {event.address}</li>
+										<li className="li">Date: {event.date}</li>
+										<li className="li">Horaire: {event.heure}</li>
+									</div>
 								);
 		          })}
 						</ul>
-						<ul>
+						<ul id="ulSep">
 		          {this.props.MesResultats.map(function(image){
 		            return(
 									<a href={image.link}>

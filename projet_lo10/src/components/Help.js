@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Help extends Component{
 	render(){
 		return (
-			<div>
+			<div id="divG">
 				<h2 className = "text-center">Heeeeeeelp</h2>
 				<section className="jumbotron">
 					<div className="panel panel-default">
