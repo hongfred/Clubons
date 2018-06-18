@@ -39,7 +39,7 @@ class Map extends Component{
 
 const mapStateToProps = (state) => {
     return {
-		    MaListe: state.todos,
+		MaListe: state.todos,
         MesEvents: state.events
     };
 };

@@ -10,7 +10,7 @@ var fs = require('fs');
 
 var routes = require('./routes/index');
 var fetchEvents = require('./routes/fetchEvents');
-var insertScenarios = require('./routes/insertScenarios');
+var insertEvents = require('./routes/insertEvents');
 var fetch = require('./routes/fetch');
 var app = express();
 
@@ -46,8 +46,7 @@ app.use(function (req, res, next) {
 
 app.use('/', routes);
 app.use('/fetchEvents', fetchEvents);
-//app.use('/insertScenarios', insertScenarios);
-//app.use('/fetch', fetch);
+app.use('/insertEvents', insertEvents);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

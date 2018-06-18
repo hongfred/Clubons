@@ -18,9 +18,7 @@ module.exports.DBConnect = function (uid, pass) {
                 pool.getConnection(function (err, connection) {
                     if (err) throw err;
                     connection.query(query, function (err, result, fields) {
-
                         resolve(result);
-
                     });
                     connection.release();
                 });
