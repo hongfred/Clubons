@@ -19,11 +19,17 @@ class Home extends Component{
 						<ul>
 							{this.props.MesEvents.map(function(event){
 		            return(
-									<li>{event.name}</li>
+									<div key={event.idevent} id="divSep">
+										<li className="li">Nom: {event.name}</li>
+										<li className="li">Description: {event.description}</li>
+										<li className="li">Addresse: {event.address}</li>
+										<li className="li">Date: {event.date}</li>
+										<li className="li">Horaire: {event.heure}</li>
+									</div>
 								);
 		          })}
 						</ul>
-						<ul style={{borderTop:"solid",marginBottom:100}}>
+						<ul id="ulSep">
 		          {this.props.MesResultats.map(function(image){
 		            return(
 									<a href={image.link}>

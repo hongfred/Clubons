@@ -27,6 +27,16 @@
   font-family: serif;
 }
 
+li.li{
+  border-Width:1px;
+  padding-Top:10px;
+  padding-Bottom:10px;
+}
+
+.navbar-fixed-bottom{
+  background-color:rgb(34,34,34)
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -37,7 +47,7 @@
     background-image: url('party-in-barcelona.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 820px;
+    height: 720px;
     width: 100%;
 }
 
@@ -63,4 +73,18 @@
 
 #divG{
   margin-top:65px;
+}
+
+#ulSep{
+  border-Top:solid;
+  border-Color:grey;
+  border-Width:1px;
+  padding-Top:20px;
+}
+
+#divSep{
+  margin-Bottom:10px;
+  border-Top:solid;
+  border-Width:1px;
+  border-Color:lightgrey
 }
