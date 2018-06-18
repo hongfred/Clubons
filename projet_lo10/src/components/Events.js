@@ -17,7 +17,7 @@ class Events extends React.Component{
 	render(){
 		return (
 			<div id="divG">
-				<h1 className = "text-center">Page test add</h1>
+				<h1 className = "text-center">Ajouter un évènement</h1>
 				<section className="jumbotron">
 					<div className="panel panel-default" id="panelEvent">
 						<div className="panel-body">

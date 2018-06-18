@@ -19,6 +19,14 @@ class FormEvent extends React.Component {
     this.testStore()
   }
 
+  resetFields(){
+    document.getElementById("nom").value = "";
+    document.getElementById("adresse").value = "";
+    document.getElementById("date").value = "";
+    document.getElementById("time").value = "";
+    document.getElementById("description").value = "";
+  }
+
   testStore(){
     Geocode.fromAddress(this.state.address).then(
       response => {
@@ -34,7 +42,8 @@ class FormEvent extends React.Component {
         + " Heure=" + document.getElementById('time').value
         + " Description=" + document.getElementById('description').value
         );
-        this.props.postEvent("http://localhost:1337/insertEvents",('{ "name":"'+document.getElementById('nom').value+'", "lat":'+this.state.latitude+', "long":'+this.state.longitude+', "description":"'+document.getElementById('description').value+'","address":"'+this.state.address+'", "date":"'+document.getElementById('date').value+'", "heure":"'+document.getElementById('time').value+'" }'));
+        this.props.postEvent("http://localhost:1337/insertEvents",('{ "name":"'+document.getElementById('nom').value+'", "lat":'+this.state.latitude+', "long":'+this.state.longitude+', "description":"'+document.getElementById('description').value+'","address":"'+this.state.address+'", "date":"'+document.getElementById('date').value+'", "heure":"'+document.getElementById('time').value+'" }'))
+        this.resetFields()
       },
       error => {
         console.error(error);
@@ -65,10 +74,10 @@ class FormEvent extends React.Component {
             <label>Titre :</label>
             <input class="eventInput" type="text" name="nom" id="nom"/><br/>
             <label>Adresse :</label>
-            <input class="eventInput"
+            <input class="eventInput" id="adresse"
               {...getInputProps({
                 placeholder: 'Search Places ...',
-                className: 'location-search-input'
+                className: 'eventInput location-search-input'
               })}
             />
             <div className="autocomplete-dropdown-container" >
@@ -96,9 +105,15 @@ class FormEvent extends React.Component {
       <input class="eventInput" type="text" name="description" id="description"/><br/>
       <Button class="createEvent"
 				bsStyle="primary"
-				onClick={this.testStore}
+        onClick={this.testStore}
 			>
 				Créer l’event
+			</Button>
+      <Button class="createEvent"
+				bsStyle="primary"
+        onClick={this.resetFields}
+			>
+				Reset Fields
 			</Button>
     </div>
     );
