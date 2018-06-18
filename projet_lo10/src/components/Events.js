@@ -19,7 +19,7 @@ class Events extends React.Component{
 			<div id="divG">
 				<h1 className = "text-center">Page test add</h1>
 				<section className="jumbotron">
-					<div className="panel panel-default">
+					<div className="panel panel-default" id="panelEvent">
 						<div className="panel-body">
 							<div className="container">
 								<section>
@@ -31,6 +31,7 @@ class Events extends React.Component{
 						</div>
 					</div>
 				</section>
+				<h1 className = "text-center">Map des events</h1>
 				<Map/>
 			</div>
 		);

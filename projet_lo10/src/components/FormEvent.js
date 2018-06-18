@@ -98,7 +98,7 @@ class FormEvent extends React.Component {
 				bsStyle="primary"
 				onClick={this.testStore}
 			>
-				Créer l’évènement
+				Créer l’event
 			</Button>
     </div>
     );

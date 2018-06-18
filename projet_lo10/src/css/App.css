@@ -60,7 +60,7 @@ li.li{
   margin-right: auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   border: solid;
 }
@@ -117,4 +117,12 @@ li.li{
 
 .labelTime{
   width: 25%;
+}
+
+#panelEvent{
+  background-image: url("https://preview.ibb.co/jwBXjd/backgroundtest2.png");
+}
+
+label{
+  color: white;
 }
