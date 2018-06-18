@@ -53,7 +53,8 @@ class FormEvent extends React.Component {
 
   render() {
     return (
-      <div className="formEvent">
+      <div class="formEvent">
+      {Geocode.setApiKey("AIzaSyAJmTnwARjZ6VBAyY8DsPFURJQt6JS26zI")}
       <PlacesAutocomplete
         value={this.state.address}
         onChange={this.handleChange}
