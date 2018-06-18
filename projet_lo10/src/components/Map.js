@@ -10,7 +10,7 @@ class Map extends Component{
           lat: 48.2924582,
           lng: 4.041101
         },
-        zoom: 10
+        zoom: 8
       };
 
     render(){
@@ -25,16 +25,20 @@ class Map extends Component{
 					<Marker
 						lat={48.269162}
 						lng={4.0667761}
-					/>	
-					{this.props.MesEvents.map(event => 
-					<Marker
-					lat={event.lat}
-					lng={event.long}
-					/>)}
+					/>
+					{this.props.MesEvents.map(function(event){
+            return(
+              <Marker key={event.idevent}
+    					lat={event.lat}
+    					lng={event.long}
+    					/>
+            );
+          })}
+
 					</GoogleMapReact>
 			</div>
 		);
-	}	
+	}
 }
 
 const mapStateToProps = (state) => {

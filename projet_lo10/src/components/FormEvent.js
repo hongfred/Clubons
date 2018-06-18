@@ -20,7 +20,7 @@ class FormEvent extends React.Component {
   }
 
   testStore(){
-    Geocode.fromAddress(this.state.address).then(
+    /*Geocode.fromAddress(this.state.address).then(
       response => {
         const { lat, lng } = response.results[0].geometry.location;
         this.setState({latitude : lat,
@@ -34,13 +34,13 @@ class FormEvent extends React.Component {
         + " Heure=" + document.getElementById('time').value
         + " Description=" + document.getElementById('description').value
         );
-        this.props.postEvent("http://localhost:1337/insertEvents",('{ "name":"'+document.getElementById('nom').value+'", "lat":'+this.state.latitude+', "long":'+this.state.longitude+', "description":"'+document.getElementById('description').value+'", "date":"'+document.getElementById('date').value+'", "heure":"'+document.getElementById('time').value+'" }')
-      );
+        this.props.postEvent("http://localhost:1337/insertEvents",('{ "name":"'+document.getElementById('nom').value+'", "lat":'+this.state.latitude+', "long":'+this.state.longitude+', "description":"'+document.getElementById('description').value+'", "date":"'+document.getElementById('date').value+'", "heure":"'+document.getElementById('time').value+'" }'));
       },
       error => {
         console.error(error);
       }
-    );
+    );*/
+    this.props.postEvent("http://localhost:1337/insertEvents",('{ "name":"'+document.getElementById('nom').value+'", "lat":'+this.state.latitude+', "long":'+this.state.longitude+', "description":"'+document.getElementById('description').value+'","address":"'+this.state.address+'", "date":"'+document.getElementById('date').value+'", "heure":"'+document.getElementById('time').value+'" }'));
   }
 
   handleSelect = (address) => {
@@ -53,7 +53,7 @@ class FormEvent extends React.Component {
 
   render() {
     return (
-      <div class="formEvent">
+      <div className="formEvent">
       <PlacesAutocomplete
         value={this.state.address}
         onChange={this.handleChange}

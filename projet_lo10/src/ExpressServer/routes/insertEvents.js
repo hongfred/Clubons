@@ -5,11 +5,9 @@ var myDB = require('../function/database')
 
 
 router.post('/', function (req, res) {
-    console.log("je suis dans le post")
-    console.log(JSON.stringify(req.body))
-    //var cas = JSON.stringify(req.body[0].cas)
-    var sql = "INSERT INTO innodb.test(`name`,`long`,`lat`,`description`,`date`,`heure`) VALUES('lol',51,23,'lolol','2018-03-18','23:25');";
-    //myDB.InsertInto(sql)
+    console.log(req.body)
+    var sql = "INSERT INTO innodb.test(`name`,`long`,`lat`,`description`,`address`,`date`,`heure`) VALUES('"+req.body.name+"',"+req.body.long+","+req.body.lat+",'"+req.body.description+"','"+req.body.address+"','"+req.body.date+"','"+req.body.heure+"');";
+    myDB.InsertInto(sql)
     res.json(
         'Insert done'
     );
