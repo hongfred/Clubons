@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import {
-	itemsFetchDataInstagram
-} from '../reduxStore/actions/actions';
-
 export class Photos extends Component{
 	render(){
 		return (
