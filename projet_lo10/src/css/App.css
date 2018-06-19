@@ -73,7 +73,9 @@ li.li{
   top: -28;
 }
 #affichagePhotos{
-  padding-left: 11%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border:double;
 }
 
 #divG{

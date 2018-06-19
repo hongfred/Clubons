@@ -6,14 +6,11 @@ import Map from './Map';
 
 import FormEvent from './FormEvent';
 
-class Events extends React.Component{
+export class Events extends React.Component{
 	constructor(props) {
         super(props);
-				this.testStore = this.testStore.bind(this)
     }
-	testStore(){
-		this.props.add('ça marche')
-	}
+
 	render(){
 		return (
 			<div id="divG">
@@ -37,17 +34,3 @@ class Events extends React.Component{
 		);
 	}
 }
-
-const mapStateToProps = (state) => {
-    return {
-        todos: state.todos
-    };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        add: (text) => dispatch(addTodo(text))
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Events);
