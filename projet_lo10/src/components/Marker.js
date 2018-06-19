@@ -33,7 +33,6 @@ class Marker extends Component{
 
 const mapStateToProps = (state) => {
     return {
-		    MaListe: state.todos,
         MesEvents: state.events
     };
 };
