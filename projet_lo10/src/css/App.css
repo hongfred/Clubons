@@ -37,6 +37,18 @@ li.li{
   background-color:rgb(34,34,34)
 }
 
+.infoPopup{
+  width: 200px;
+  background-color: white;
+  border: solid;
+}
+
+.labelPopup{
+  text-decoration: underline;
+  font-weight: bold;
+  display: inline-block;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
