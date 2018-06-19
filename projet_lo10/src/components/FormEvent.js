@@ -90,7 +90,7 @@ class FormEvent extends React.Component {
           </div>
         )}
       </PlacesAutocomplete>
-      <label className="labelTime">Date de l’event :</label>
+      <label className="labelDate">Date de l’event :</label>
       <input className="timeInput dateInput" type="date" name="date" id="date"/>
       <label className="labelTime">Heure de l’event :</label>
       <input className="timeInput hourInput" type="time" name="time" id="time"/><br/>

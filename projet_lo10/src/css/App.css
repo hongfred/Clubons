@@ -111,7 +111,7 @@ li.li{
 }
 
 .formEvent{
-  width: 50%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -133,12 +133,31 @@ li.li{
 
 .labelTime{
   width: 25%;
+  padding: 15px;
+}
+
+.labelDate{
+  width: 25%;
 }
 
 #panelEvent{
   background-image: url("https://preview.ibb.co/jwBXjd/backgroundtest2.png");
+  padding-top: 100px;
+  padding-bottom: 125px;
 }
 
 label{
+  color: white;
+}
+
+#textAddEvent{
+  color: whitesmoke;
+}
+
+.navbar-nav a{
+  color: rgb(189, 189, 189)
+}
+
+#brand{
   color: white;
 }

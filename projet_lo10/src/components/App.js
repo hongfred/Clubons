@@ -24,7 +24,6 @@ class App extends Component {
     return (
       <Router>
   			<div>
-				<StoreV/>
   				<Header/>
   				<MyNav/>
   				<Switch>
@@ -56,7 +55,7 @@ class MyNav extends Component{
         <Navbar className="navbar navbar-fixed-top" inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#brand">Clubons</a>
+              <a href="#brand" id="brand">Clubons</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

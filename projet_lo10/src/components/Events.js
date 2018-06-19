@@ -7,24 +7,16 @@ import FormEvent from './FormEvent';
 export class Events extends React.Component{
 	render(){
 		return (
-			<div id="divG">
-				<h1 className = "text-center">Ajouter un évènement</h1>
-				<section className="jumbotron">
+			<div>
 					<div className="panel panel-default" id="panelEvent">
-						<div className="panel-body">
-							<div className="container">
-								<section>
-									<Grid>
-										<FormEvent className="formEvent"/>
-									</Grid>
-								</section>
-							</div>
-						</div>
+						<Grid>
+						<h1 className = "text-center" id="textAddEvent">Ajouter un évènement</h1>
+							<FormEvent className="formEvent"/>
+						</Grid>
 					</div>
-				</section>
-				<h1 className = "text-center">Map des events</h1>
+				<h1 className = "text-center">Map des evènements</h1>
 				<Map/>
-			</div>
+				</div>
 		);
 	}
 }
