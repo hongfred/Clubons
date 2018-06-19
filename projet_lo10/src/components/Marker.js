@@ -16,9 +16,10 @@ class Marker extends Component{
 			>
 				<img src={image} alt="marqueur"></img>
 				<div className="infoPopup" style={{
-					display: disp
+					display: disp,
 				}}>
-					<div><p className="labelPopup">Nom évènement :</p> {this.props.MesEvents[this.props.myId].name}<br/>
+					<div>
+						<p className="labelPopup">Nom évènement :</p> {this.props.MesEvents[this.props.myId].name}<br/>
 						<p className="labelPopup">Adresse :</p> {this.props.MesEvents[this.props.myId].address}<br/>
 						<p className="labelPopup">Date :</p> {this.props.MesEvents[this.props.myId].date.substring(0,10)}<br/>
 						<p className="labelPopup">Heure :</p> {this.props.MesEvents[this.props.myId].heure.substring(0,5)}<br/>
