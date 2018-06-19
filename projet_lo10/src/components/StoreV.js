@@ -7,10 +7,10 @@ class StoreV extends React.Component{
 		return(
 			<div>
 				<h4>Mon store:</h4>
-				<ul>
-					<li>Todos: {JSON.stringify(this.props.MaListe)}</li>
-					<li>Resultat: {JSON.stringify(this.props.MesResultats)}</li>
+				<ul style={{marginTop:50}}>
+					<li>Photos: {JSON.stringify(this.props.MesResultats)}</li>
 					<li>Events: {JSON.stringify(this.props.MesEvents)}</li>
+					<li>add: {JSON.stringify(this.props.MaListe)}</li>
 					<li>PostEvents: {JSON.stringify(this.props.PostEvents)}</li>
 				</ul>
 			</div>

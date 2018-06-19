@@ -2,7 +2,7 @@ import React from 'react'
 import PlacesAutocomplete from 'react-places-autocomplete'
 import Geocode from "react-geocode";
 import { connect } from 'react-redux';
-import { addTodo, eventPostData} from '../reduxStore/actions/actions'
+import { eventPostData, itemsFetchEvents} from '../reduxStore/actions/actions'
 import {Button } from 'react-bootstrap';
 
 class FormEvent extends React.Component {
@@ -25,24 +25,17 @@ class FormEvent extends React.Component {
     document.getElementById("date").value = "";
     document.getElementById("time").value = "";
     document.getElementById("description").value = "";
+    this.state = { address: '',
+      latitude : 0,
+      longitude: 0
+    }
   }
 
   testStore(){
     Geocode.fromAddress(this.state.address).then(
       response => {
         const { lat, lng } = response.results[0].geometry.location;
-        this.setState({latitude : lat,
-        longitude : lng});
-        this.props.add(
-          "Area=" + this.state.address
-        + " Latitude=" + this.state.latitude
-        + " Longitude=" + this.state.longitude
-        + " Nom=" + document.getElementById('nom').value
-        + " Date=" + document.getElementById('date').value
-        + " Heure=" + document.getElementById('time').value
-        + " Description=" + document.getElementById('description').value
-        );
-        this.props.postEvent("http://localhost:1337/insertEvents",('{ "name":"'+document.getElementById('nom').value+'", "lat":'+this.state.latitude+', "long":'+this.state.longitude+', "description":"'+document.getElementById('description').value+'","address":"'+this.state.address+'", "date":"'+document.getElementById('date').value+'", "heure":"'+document.getElementById('time').value+'" }'))
+        this.props.postEvent("http://localhost:1337/insertEvents",('{ "name":"'+document.getElementById('nom').value+'", "lat":'+lat+', "long":'+lng+', "description":"'+document.getElementById('description').value+'","address":"'+this.state.address+'", "date":"'+document.getElementById('date').value+'", "heure":"'+document.getElementById('time').value+'" }'))
         this.resetFields()
       },
       error => {
@@ -122,14 +115,13 @@ class FormEvent extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        todos: state.todos
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        add: (text) => dispatch(addTodo(text)),
-        postEvent: (url, data) => dispatch(eventPostData(url, data))
+        postEvent: (url, data) => dispatch(eventPostData(url, data)),
+        fetchEvents: (url) => dispatch(itemsFetchEvents(url))
     };
 };
 

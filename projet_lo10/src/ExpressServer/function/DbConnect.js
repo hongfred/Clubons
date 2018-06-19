@@ -43,13 +43,17 @@ module.exports.DBConnect = function (uid, pass) {
     }
 
     this.InsertInto = function (query) {
-        pool.getConnection(function (err, connection) {
-            if (err) throw err;
-            connection.query(query, function (err, result) {
-                console.log("insert data done");
+      return new Promise(
+          function (resolve, reject) {
+            pool.getConnection(function (err, connection) {
+                if (err) throw err;
+                connection.query(query, function (err, result) {
+                    resolve("insert data done");
+                });
+                connection.release();
             });
-            connection.release();
-        });
+          }
+      );
     }
     this.Delete = function (query) {
         pool.getConnection(function (err, connection) {

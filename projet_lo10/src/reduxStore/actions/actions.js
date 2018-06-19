@@ -125,7 +125,7 @@ export function eventPostData(url, data) {
                 return response;
             })
             .then((response) => response.json())
-            .then((events) => dispatch(eventPostScenarioSuccess(events)))
+            .then((events) => dispatch(itemsFetchEventsSuccess(events)))
             .catch(() => dispatch(itemsHasErrored(true)));
     });
 }

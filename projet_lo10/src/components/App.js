@@ -16,7 +16,7 @@ import {
 } from '../reduxStore/actions/actions';
 
 class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchData("https://api.instagram.com/v1/users/self/media/recent/?access_token=7948788050.196ebc1.52871b03b5fe491090357b82eadb9a23");
     this.props.fetchEvents("http://localhost:1337/fetchEvents");
   }
@@ -24,6 +24,7 @@ class App extends Component {
     return (
       <Router>
   			<div>
+					<StoreV/>
   				<Header/>
   				<MyNav/>
   				<Switch>
