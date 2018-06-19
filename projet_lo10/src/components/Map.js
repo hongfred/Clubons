@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Marker } from './Marker';
+import Marker from './Marker';
 import GoogleMapReact from 'google-map-react';
 import { connect } from 'react-redux';
 
