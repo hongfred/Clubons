@@ -24,9 +24,10 @@ class Map extends Component{
 					>
 					{this.props.MesEvents.map(function(event){
             return(
-              <Marker key={event.idevent}
+              <Marker key={event.idtest}
     					lat={event.lat}
     					lng={event.long}
+              myId={event.idtest}
     					/>
             );
           })}

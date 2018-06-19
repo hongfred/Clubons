@@ -15,19 +15,15 @@ class Marker extends Component{
 				top: -28}}
 			>
 				<img src={image} alt="marqueur"></img>
-				<div class="infoPopup" style={{
+				<div className="infoPopup" style={{
 					display: disp
 				}}>
-					{JSON.stringify(this.props.MesEvents[0].name)}
-					{this.props.MesEvents.map(function(event){
-		            return(
-									<p><p class="labelPopup">Nom évènement :</p> {event.name}<br/>
-									<p class="labelPopup">Adresse :</p> {event.address}<br/>
-									<p class="labelPopup">Date :</p> {event.date.substring(0,10)}<br/>
-									<p class="labelPopup">Heure :</p> {event.heure.substring(0,5)}<br/>
-									<p class="labelPopup">Description :</p> {event.description}</p>
-		            );
-		      })}
+					<div><p className="labelPopup">Nom évènement :</p> {this.props.MesEvents[this.props.myId].name}<br/>
+						<p className="labelPopup">Adresse :</p> {this.props.MesEvents[this.props.myId].address}<br/>
+						<p className="labelPopup">Date :</p> {this.props.MesEvents[this.props.myId].date.substring(0,10)}<br/>
+						<p className="labelPopup">Heure :</p> {this.props.MesEvents[this.props.myId].heure.substring(0,5)}<br/>
+						<p className="labelPopup">Description :</p> {this.props.MesEvents[this.props.myId].description}
+					</div>
 				</div>
 			</div>
 		);
