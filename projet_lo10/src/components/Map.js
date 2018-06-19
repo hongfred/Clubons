@@ -16,16 +16,12 @@ class Map extends Component{
     render(){
 		return (
 			<div id="mapEvent">
-        			<GoogleMapReact
-					bootstrapURLKeys={{ key: 'AIzaSyAJmTnwARjZ6VBAyY8DsPFURJQt6JS26zI'}}
-					defaultCenter={this.props.center}
-					defaultZoom={this.props.zoom}
-					hoverDistance={28}
+        	<GoogleMapReact
+  					bootstrapURLKeys={{ key: 'AIzaSyAJmTnwARjZ6VBAyY8DsPFURJQt6JS26zI'}}
+  					defaultCenter={this.props.center}
+  					defaultZoom={this.props.zoom}
+  					hoverDistance={28}
 					>
-					<Marker
-						lat={48.269162}
-						lng={4.0667761}
-					/>
 					{this.props.MesEvents.map(function(event){
             return(
               <Marker key={event.idevent}
@@ -43,7 +39,7 @@ class Map extends Component{
 
 const mapStateToProps = (state) => {
     return {
-		MaListe: state.todos,
+		    MaListe: state.todos,
         MesEvents: state.events
     };
 };

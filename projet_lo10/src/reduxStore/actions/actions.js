@@ -5,22 +5,6 @@ export const addTodo = text => ({
   text
 })
 
-export const setVisibilityFilter = filter => ({
-  type: 'SET_VISIBILITY_FILTER',
-  filter
-})
-
-export const toggleTodo = id => ({
-  type: 'TOGGLE_TODO',
-  id
-})
-
-export const VisibilityFilters = {
-  SHOW_ALL: 'SHOW_ALL',
-  SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
-}
-
 export function itemsHasErrored(bool) {
     return {
         type: 'ITEMS_HAS_ERRORED',
@@ -96,13 +80,6 @@ export function itemsFetchEvents(url) {
     });
 }
 
-export function eventPostScenarioSuccess(postEvents) {
-	return {
-        type:'DATA_POST_EVENTS_SUCCESS',
-        postEvents
-    };
-}
-
 export function eventPostData(url, data) {
     return((dispatch) => {
         console.log(data)
@@ -125,7 +102,7 @@ export function eventPostData(url, data) {
                 return response;
             })
             .then((response) => response.json())
-            .then((events) => dispatch(eventPostScenarioSuccess(events)))
+            .then((events) => dispatch(itemsFetchEventsSuccess(events)))
             .catch(() => dispatch(itemsHasErrored(true)));
     });
 }

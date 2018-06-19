@@ -56,8 +56,13 @@ li.li{
 }
 
 #mapEvent{
-  height: 50vh;
-  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 92vh;
+  width: 100%;
+  border: solid;
 }
 
 #marker{
@@ -68,7 +73,9 @@ li.li{
   top: -28;
 }
 #affichagePhotos{
-  padding-left: 11%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border:double;
 }
 
 #divG{
@@ -87,4 +94,37 @@ li.li{
   border-Top:solid;
   border-Width:1px;
   border-Color:lightgrey
+}
+
+.formEvent{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eventInput, .location-search-input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.timeInput{
+  width: 25%;
+  left: 0px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.labelTime{
+  width: 25%;
+}
+
+#panelEvent{
+  background-image: url("https://preview.ibb.co/jwBXjd/backgroundtest2.png");
+}
+
+label{
+  color: white;
 }

@@ -4,7 +4,7 @@ var router = express.Router();
 var myDB = require('../function/database')
 
 router.get('/', function (req, res) {
-    var sql = "SELECT * FROM innodb.my_events;";
+    var sql = "SELECT * FROM innodb.test;";
     myDB.Select(sql)
         .then(function (result) {
             console.log(result);

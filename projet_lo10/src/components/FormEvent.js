@@ -2,7 +2,7 @@ import React from 'react'
 import PlacesAutocomplete from 'react-places-autocomplete'
 import Geocode from "react-geocode";
 import { connect } from 'react-redux';
-import { addTodo, eventPostData} from '../reduxStore/actions/actions'
+import { eventPostData, itemsFetchEvents} from '../reduxStore/actions/actions'
 import {Button } from 'react-bootstrap';
 
 class FormEvent extends React.Component {
@@ -19,22 +19,24 @@ class FormEvent extends React.Component {
     this.testStore()
   }
 
+  resetFields(){
+    document.getElementById("nom").value = "";
+    document.getElementById("adresse").value = "";
+    document.getElementById("date").value = "";
+    document.getElementById("time").value = "";
+    document.getElementById("description").value = "";
+    this.state = { address: '',
+      latitude : 0,
+      longitude: 0
+    }
+  }
+
   testStore(){
     Geocode.fromAddress(this.state.address).then(
       response => {
         const { lat, lng } = response.results[0].geometry.location;
-        this.setState({latitude : lat,
-        longitude : lng});
-        this.props.add(
-          "Area=" + this.state.address
-        + " Latitude=" + this.state.latitude
-        + " Longitude=" + this.state.longitude
-        + " Nom=" + document.getElementById('nom').value
-        + " Date=" + document.getElementById('date').value
-        + " Heure=" + document.getElementById('time').value
-        + " Description=" + document.getElementById('description').value
-        );
-        this.props.postEvent("http://localhost:1337/insertEvents",('{ "name":"'+document.getElementById('nom').value+'", "lat":'+this.state.latitude+', "long":'+this.state.longitude+', "description":"'+document.getElementById('description').value+'","address":"'+this.state.address+'", "date":"'+document.getElementById('date').value+'", "heure":"'+document.getElementById('time').value+'" }'));
+        this.props.postEvent("http://localhost:1337/insertEvents",('{ "name":"'+document.getElementById('nom').value+'", "lat":'+lat+', "long":'+lng+', "description":"'+document.getElementById('description').value+'","address":"'+this.state.address+'", "date":"'+document.getElementById('date').value+'", "heure":"'+document.getElementById('time').value+'" }'))
+        this.resetFields()
       },
       error => {
         console.error(error);
@@ -63,15 +65,15 @@ class FormEvent extends React.Component {
         {({ getInputProps, suggestions, getSuggestionItemProps }) => (
           <div>
             <label>Titre :</label>
-            <input type="text" name="nom" id="nom"/><br/>
+            <input class="eventInput" type="text" name="nom" id="nom"/><br/>
             <label>Adresse :</label>
-            <input
+            <input class="eventInput" id="adresse"
               {...getInputProps({
                 placeholder: 'Search Places ...',
-                className: 'location-search-input'
+                className: 'eventInput location-search-input'
               })}
             />
-            <div className="autocomplete-dropdown-container">
+            <div className="autocomplete-dropdown-container" >
               {suggestions.map(suggestion => {
                 const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item';
                 // inline style for demonstration purpose
@@ -88,17 +90,23 @@ class FormEvent extends React.Component {
           </div>
         )}
       </PlacesAutocomplete>
-      <label>Date de l’évènement :</label>
-      <input type="date" name="date" id="date"/><br/>
-      <label>Heure de l’évènement :</label>
-      <input type="time" name="time" id="time"/><br/>
+      <label class="labelTime">Date de l’event :</label>
+      <input class="timeInput dateInput" type="date" name="date" id="date"/>
+      <label class="labelTime">Heure de l’event :</label>
+      <input class="timeInput hourInput" type="time" name="time" id="time"/><br/>
       <label>Description :</label>
-      <input type="text" name="description" id="description"/><br/>
-      <Button
+      <input class="eventInput" type="text" name="description" id="description"/><br/>
+      <Button class="createEvent"
 				bsStyle="primary"
-				onClick={this.testStore}
+        onClick={this.testStore}
 			>
-				Créer l’évènement
+				Créer l’event
+			</Button>
+      <Button class="createEvent"
+				bsStyle="primary"
+        onClick={this.resetFields}
+			>
+				Reset Fields
 			</Button>
     </div>
     );
@@ -107,14 +115,13 @@ class FormEvent extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        todos: state.todos
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        add: (text) => dispatch(addTodo(text)),
-        postEvent: (url, data) => dispatch(eventPostData(url, data))
+        postEvent: (url, data) => dispatch(eventPostData(url, data)),
+        fetchEvents: (url) => dispatch(itemsFetchEvents(url))
     };
 };
 
