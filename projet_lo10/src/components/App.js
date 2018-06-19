@@ -5,7 +5,7 @@ import {Link, Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Home from './Home';
-import Events from './Events';
+import {Events} from './Events';
 import Photos from './Photos';
 import {Help} from './Help';
 import StoreV from './StoreV'
@@ -24,7 +24,6 @@ class App extends Component {
     return (
       <Router>
   			<div>
-					<StoreV/>
   				<Header/>
   				<MyNav/>
   				<Switch>
@@ -78,11 +77,8 @@ class MyNav extends Component{
 
 const Footer = () => (
 	<footer>
-		<div className="footer navbar-fixed-bottom">
-			<p>
-				<i className="icon-user"></i> Admin
-				<i className="icon-calendar"></i> Jan 23th, 2017 at 2:20 pm
-			</p>
+	<div className="footer navbar-fixed-bottom" style={{color:"grey"}}>
+			Clubons, Admin: Frédéic Hong, Nicolas Cadot
       <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJmTnwARjZ6VBAyY8DsPFURJQt6JS26zI&libraries=places"></script>
 		</div>
 	</footer>

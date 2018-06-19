@@ -25,10 +25,10 @@ class FormEvent extends React.Component {
     document.getElementById("date").value = "";
     document.getElementById("time").value = "";
     document.getElementById("description").value = "";
-    this.state = { address: '',
+    this.setState({ address: '',
       latitude : 0,
       longitude: 0
-    }
+    })
   }
 
   testStore(){
@@ -55,7 +55,7 @@ class FormEvent extends React.Component {
 
   render() {
     return (
-      <div class="formEvent">
+      <div className="formEvent">
       {Geocode.setApiKey("AIzaSyAJmTnwARjZ6VBAyY8DsPFURJQt6JS26zI")}
       <PlacesAutocomplete
         value={this.state.address}
@@ -65,9 +65,9 @@ class FormEvent extends React.Component {
         {({ getInputProps, suggestions, getSuggestionItemProps }) => (
           <div>
             <label>Titre :</label>
-            <input class="eventInput" type="text" name="nom" id="nom"/><br/>
+            <input className="eventInput" type="text" name="nom" id="nom"/><br/>
             <label>Adresse :</label>
-            <input class="eventInput" id="adresse"
+            <input className="eventInput" id="adresse"
               {...getInputProps({
                 placeholder: 'Search Places ...',
                 className: 'eventInput location-search-input'
@@ -90,19 +90,19 @@ class FormEvent extends React.Component {
           </div>
         )}
       </PlacesAutocomplete>
-      <label class="labelTime">Date de l’event :</label>
-      <input class="timeInput dateInput" type="date" name="date" id="date"/>
-      <label class="labelTime">Heure de l’event :</label>
-      <input class="timeInput hourInput" type="time" name="time" id="time"/><br/>
+      <label className="labelTime">Date de l’event :</label>
+      <input className="timeInput dateInput" type="date" name="date" id="date"/>
+      <label className="labelTime">Heure de l’event :</label>
+      <input className="timeInput hourInput" type="time" name="time" id="time"/><br/>
       <label>Description :</label>
-      <input class="eventInput" type="text" name="description" id="description"/><br/>
-      <Button class="createEvent"
+      <input className="eventInput" type="text" name="description" id="description"/><br/>
+      <Button className="createEvent"
 				bsStyle="primary"
         onClick={this.testStore}
 			>
 				Créer l’event
 			</Button>
-      <Button class="createEvent"
+      <Button className="createEvent"
 				bsStyle="primary"
         onClick={this.resetFields}
 			>

@@ -11,7 +11,6 @@ class StoreV extends React.Component{
 					<li>Photos: {JSON.stringify(this.props.MesResultats)}</li>
 					<li>Events: {JSON.stringify(this.props.MesEvents)}</li>
 					<li>add: {JSON.stringify(this.props.MaListe)}</li>
-					<li>PostEvents: {JSON.stringify(this.props.PostEvents)}</li>
 				</ul>
 			</div>
 		)
@@ -22,8 +21,7 @@ const mapStateToProps = (state) => {
     return {
 		    MaListe: state.todos,
 				MesResultats: state.results,
-				MesEvents: state.events,
-				PostEvents: state.postEvents
+				MesEvents: state.events
     };
 };
 

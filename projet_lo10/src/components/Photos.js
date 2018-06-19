@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import {
-	itemsFetchDataInstagram
-} from '../reduxStore/actions/actions';
-
 export class Photos extends Component{
 	render(){
 		return (
@@ -14,7 +10,7 @@ export class Photos extends Component{
 	        {this.props.MesResultats.map(function(image){
 	          return(
 								<a href={image.link}>
-								  <img src={image.url} alt={image.id} width="20%" height="20%" style={{margin:"10px"}}/>
+								  <img src={image.url} alt={image.id} width="23.4%" height="23.4%" style={{margin:"10px"}}/>
 								</a>
 						);
 	        })}

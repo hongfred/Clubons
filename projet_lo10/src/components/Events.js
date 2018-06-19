@@ -1,19 +1,10 @@
 import React from 'react';
 import { Grid} from 'react-bootstrap';
-import { connect } from 'react-redux';
-import { addTodo } from '../reduxStore/actions/actions'
 import Map from './Map';
 
 import FormEvent from './FormEvent';
 
-class Events extends React.Component{
-	constructor(props) {
-        super(props);
-				this.testStore = this.testStore.bind(this)
-    }
-	testStore(){
-		this.props.add('ça marche')
-	}
+export class Events extends React.Component{
 	render(){
 		return (
 			<div id="divG">
@@ -37,17 +28,3 @@ class Events extends React.Component{
 		);
 	}
 }
-
-const mapStateToProps = (state) => {
-    return {
-        todos: state.todos
-    };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        add: (text) => dispatch(addTodo(text))
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Events);
