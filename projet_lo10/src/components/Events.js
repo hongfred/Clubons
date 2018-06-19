@@ -1,16 +1,10 @@
 import React from 'react';
 import { Grid} from 'react-bootstrap';
-import { connect } from 'react-redux';
-import { addTodo } from '../reduxStore/actions/actions'
 import Map from './Map';
 
 import FormEvent from './FormEvent';
 
 export class Events extends React.Component{
-	constructor(props) {
-        super(props);
-    }
-
 	render(){
 		return (
 			<div id="divG">
